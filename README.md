@@ -2,12 +2,12 @@
 ## InstructGPT: Aligning AI Through Human Feedback
 
 **Paper:** Training Language Models to Follow Instructions with Human Feedback
-**Authors:** Long Ouyang*, Jeff Wu*, Xu Jiang*, Diogo Almeida*, Carroll L. Wainwright*, Pamela Mishkin*, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, Ryan Lowe (* equal contribution)
-**Organization:** OpenAI
-**Published:** March 2022
+**Authors:** Long Ouyang*, Jeff Wu*, Xu Jiang*, Diogo Almeida*, Carroll L. Wainwright*, Pamela Mishkin*, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, Ryan Lowe (* equal contribution)  
+**Organization:** OpenAI  
+**Published:** March 2022  
 **ArXiv:** https://arxiv.org/abs/2203.02155
 
-**Presented by:** Natasha Messier
+**Presented by:** Natasha Messier  
 **Date:** 10/28/2025
 
 ---
@@ -67,7 +67,7 @@ Let's break down what this looks like for language models:
 #### Step 1: Supervised Fine-Tuning (SFT)
 Human labelers write demonstrations showing how the model *should* respond to prompts. The model learns by imitating these high-quality examples.
 
-**Data:** 13,000 prompts with human-written ideal responses
+**Data:** 13,000 prompts with human-written ideal responses  
 **Process:** Standard supervised learning—predict the demonstration given the prompt
 
 #### Step 2: Reward Model (RM) Training
@@ -75,7 +75,7 @@ The model needs to learn what humans *prefer*, not just what one human wrote. So
 
 For each prompt, we generate multiple outputs and have humans rank them from best to worst. Then we train a **reward model** to predict which outputs humans will prefer.
 
-**Data:** 33,000 prompts, each with 4-9 model outputs ranked by humans
+**Data:** 33,000 prompts, each with 4-9 model outputs ranked by humans  
 **Process:** Learn to predict human preferences using pairwise comparisons
 
 #### Step 3: Reinforcement Learning (PPO)
